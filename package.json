@@ -1,0 +1,33 @@
+{
+  "name": "npm_workspace_test",
+  "version": "1.0.0",
+  "description": "npm の workspace を使ってみる",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sug1t0m0/npm_workspace_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sug1t0m0/npm_workspace_test/issues"
+  },
+  "homepage": "https://github.com/sug1t0m0/npm_workspace_test#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.93",
+    "@types/node": "^17.0.21",
+    "esbuild": "^0.14.25",
+    "ts-node": "^10.6.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}

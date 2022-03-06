@@ -1,0 +1,25 @@
+{
+  "name": "post_change_hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild ./src/index.js --target=es2020,node14 --bundle --platform=node --outfile=dist/index.js --external:node:*",
+    "build:zip": "npm run build && zip -j lambda.zip dist/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sug1t0m0/npm_workspace_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sug1t0m0/npm_workspace_test/issues"
+  },
+  "homepage": "https://github.com/sug1t0m0/npm_workspace_test#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1087.0",
+    "node-fetch": "^3.2.1"
+  }
+}
