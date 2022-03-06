@@ -108,3 +108,6 @@ dist
 
 # dist
 packages/**/dist
+
+# zip
+packages/**/*.zip
