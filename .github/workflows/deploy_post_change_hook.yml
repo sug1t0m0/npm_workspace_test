@@ -19,5 +19,5 @@ jobs:
           run: npm install
         - name: lint
           run: npm run --workspaces lint
-        - name: generate .zip
+        - name: generate .zip file
           run: npm run build:zip -w packages/post_change_hook

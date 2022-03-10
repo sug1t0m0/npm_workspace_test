@@ -6,7 +6,7 @@ on:
       - feature/*
 jobs:
   deploy:
-    name: deploy_post_change_hook
+    name: test
       steps:
         - name: checkout
           uses: actions/checkout@v2
