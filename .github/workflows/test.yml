@@ -6,16 +6,17 @@ on:
       - feature/*
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     name: test
     steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: setup Node
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        cache: 'npm'
-    - name: install
-      run: npm install
-    - name: lint
-      run: npm run --workspaces lint
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          cache: 'npm'
+      - name: install
+        run: npm install
+      - name: lint
+        run: npm run --workspaces lint
