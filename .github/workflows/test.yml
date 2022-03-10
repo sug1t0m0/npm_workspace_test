@@ -1,0 +1,21 @@
+name: deploy_post_change_hook
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+jobs:
+  deploy:
+    name: deploy_post_change_hook
+      steps:
+        - name: checkout
+          uses: actions/checkout@v2
+        - name: setup Node
+          uses: actions/setup-node@v2
+          with:
+            node-version: '14'
+            cache: 'npm'
+        - name: install
+          run: npm install
+        - name: lint
+          run: npm run --workspaces lint

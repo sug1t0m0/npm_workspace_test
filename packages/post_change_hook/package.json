@@ -6,7 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild ./src/index.js --target=es2020,node14 --bundle --platform=node --outfile=dist/index.js --external:node:*",
-    "build:zip": "npm run build && zip -j lambda.zip dist/*.js"
+    "build:zip": "npm run build && zip -j lambda.zip dist/*.js",
+    "check-types": "tsc --noEmit",
+    "eslint": "eslint src/**.ts",
+    "eslint:fix": "eslint src/**.ts --fix",
+    "format": "prettier --write 'src/**.{js,ts,json}'",
+    "lint": "npm-run-all eslint check-types",
+    "lint:fix": "npm-run-all eslint:fix check-types format"
   },
   "repository": {
     "type": "git",
